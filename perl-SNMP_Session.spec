@@ -7,7 +7,6 @@ License:	Artistic
 URL:		http://www.switch.ch/misc/leinen/snmp/perl/
 Source0:	http://www.switch.ch/misc/leinen/snmp/perl/dist/SNMP_Session-%{version}.tar.gz
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 Pure Perl SNMP v1 and SNMP v2 support for Perl 5.

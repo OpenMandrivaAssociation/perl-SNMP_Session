@@ -1,6 +1,6 @@
 Summary:	SNMP support for Perl 5
 Name:		perl-SNMP_Session
-Version:	1.10
+Version:	1.12
 Release:	%mkrel 1
 Group:		Development/Perl
 License:	Artistic

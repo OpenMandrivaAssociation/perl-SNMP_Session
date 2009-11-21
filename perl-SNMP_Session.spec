@@ -6,6 +6,7 @@ Group:		Development/Perl
 License:	Artistic
 URL:		http://code.google.com/p/snmp-session/
 Source0:	http://snmp-session.googlecode.com/files/SNMP_Session-%{version}.tar.gz
+Patch:      SNMP_Session-1.13-fix-ipv6-error-messages.patch
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -17,6 +18,7 @@ and "set", as well as trap generation and reception.
 
 %prep
 %setup -q -n SNMP_Session-%{version}
+%patch -p 1
 %{__perl} -pi -e 's|^#!/usr/local/bin/perl\b|#!%{__perl}|' test/*
 
 %build

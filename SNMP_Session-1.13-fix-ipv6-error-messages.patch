@@ -1,0 +1,20 @@
+diff -Naur -x '*~' SNMP_Session-1.13/lib/SNMP_Session.pm SNMP_Session-1.13-fix-ipv6-error-messages/lib/SNMP_Session.pm
+--- SNMP_Session-1.13/lib/SNMP_Session.pm	2008-11-21 06:25:17.000000000 +0100
++++ SNMP_Session-1.13-fix-ipv6-error-messages/lib/SNMP_Session.pm	2009-11-21 21:49:09.000000000 +0100
+@@ -146,7 +146,7 @@
+ 
+     if (eval {local $SIG{__DIE__};require Socket6;} &&
+        eval {local $SIG{__DIE__};require IO::Socket::INET6; IO::Socket::INET6->VERSION("1.26");}) {
+-	import Socket6;
++	import Socket6 qw(pack_sockaddr_in6 inet_pton);
+ 	$ipv6_addr_len = length(pack_sockaddr_in6(161, inet_pton(AF_INET6(), "::1")));
+ 	$SNMP_Session::ipv6available = 1;
+     }
+@@ -605,7 +605,6 @@
+ BEGIN {
+     if($SNMP_Session::ipv6available) {
+ 	import IO::Socket::INET6;
+-	import Socket6;
+     }
+ }
+ 

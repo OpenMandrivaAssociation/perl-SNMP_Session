@@ -4,7 +4,7 @@ Version:	1.13
 Release:	4
 Group:		Development/Perl
 License:	Artistic
-URL:		http://code.google.com/p/snmp-session/
+URL:		https://code.google.com/p/snmp-session/
 Source0:	http://snmp-session.googlecode.com/files/SNMP_Session-%{version}.tar.gz
 Patch:      SNMP_Session-1.13-fix-ipv6-error-messages.patch
 

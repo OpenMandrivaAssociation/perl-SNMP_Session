@@ -1,7 +1,7 @@
 Summary:	SNMP support for Perl 5
 Name:		perl-SNMP_Session
-Version:	1.13
-Release:	4
+Version:	1.16
+Release:	1
 Group:		Development/Perl
 License:	Artistic
 URL:		https://code.google.com/p/snmp-session/

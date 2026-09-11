@@ -5,7 +5,7 @@ Release:	1
 Group:		Development/Perl
 License:	Artistic
 URL:		https://code.google.com/p/snmp-session/
-Source0:	http://snmp-session.googlecode.com/files/SNMP_Session-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SK/SKIM/SNMP_Session-%{version}.tar.gz
 Patch:      SNMP_Session-1.13-fix-ipv6-error-messages.patch
 
 BuildRequires:	make
@@ -20,7 +20,7 @@ and "set", as well as trap generation and reception.
 
 %prep
 %setup -q -n SNMP_Session-%{version}
-%patch -p 1
+%patch -P0 -p1
 perl -pi -e 's|^#!/usr/local/bin/perl\b|#!%{__perl}|' test/*
 
 %build
